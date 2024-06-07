@@ -1,2 +1,3 @@
 # PropertyBasedTesting
-Examples of property based testing
+
+Examples of property based testing.
