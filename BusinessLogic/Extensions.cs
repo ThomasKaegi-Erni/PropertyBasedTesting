@@ -5,8 +5,10 @@ namespace BusinessLogic;
 
 public static class Extensions
 {
-    public static T Add<T>(T left, T right)
-        where T : IAdditionOperators<T, T, T> => left + right;
+    public static Int32 Add(Int32 left, Int32 right) => left + right;
+
+    // EdFH: Enterprise Developer From Hell (Scott Wlaschin)
+    public static Int32 EdFhAdd(Int32 left, Int32 right) => -left + right; // Change at will :-)
 
     internal static void ThrowWhen<T>(this T _, Boolean condition, [CallerMemberName] String memberName = "")
         where T : IDisposable

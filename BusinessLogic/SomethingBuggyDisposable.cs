@@ -19,7 +19,10 @@ public sealed class SomethingBuggyDisposable : IDoSomething, IDisposable
     public void Dispose()
     {
         // intentional programming error!
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
         Console.WriteLine($"Disposing: {this.someResource.ToString()}");
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+
         this.someResource = null; // Common, but here for demo purposes only...
     }
 }

@@ -5,6 +5,7 @@ namespace BusinessLogic.Test;
 // Note that none of these tests rely on the actual value of the input values
 // All the tests do is assert for correct properties of addition (in the mathematical sense...)
 
+[Trait("Operation", "Addition")]
 public class AdditionTest
 {
     private const Int32 testSize = 12;
@@ -49,6 +50,15 @@ public class AdditionTest
         Int32 xyThenZ = Add(Add(x, y), z); ;
 
         Assert.Equal(yzThenX, xyThenZ);
+    }
+
+    [Theory]
+    [MemberData(nameof(Values))]
+    public void AddValueToItselfIsTheSameAsMultiplyingTheValueByTwo(Int32 value)
+    {
+        Int32 doubled = Add(value, value);
+
+        Assert.Equal(2 * value, doubled);
     }
 
     public static IEnumerable<Object[]> Values()
