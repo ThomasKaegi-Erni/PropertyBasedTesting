@@ -6,6 +6,7 @@ namespace BusinessLogic.Test;
 // All the tests do is assert for correct properties of addition (in the mathematical sense...)
 
 [Trait("Operation", "Addition")]
+[Trait("Expectation", "Succeeding")]
 public class AdditionTest
 {
     private const Int32 testSize = 12;

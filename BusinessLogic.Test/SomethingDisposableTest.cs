@@ -1,5 +1,7 @@
 namespace BusinessLogic.Test;
 
+[Trait("Operation", "Dispose")]
+[Trait("Expectation", "Succeeding")]
 public class SomethingDisposableTest
 {
     private readonly DisposeProperties<SomethingDisposable> tester = new(() => new SomethingDisposable());

@@ -11,6 +11,7 @@ namespace BusinessLogic.Test;
 // Run with: --filter "Operation=Addition"
 [Trait("Kind", "FsCheck")]
 [Trait("Operation", "Addition")]
+[Trait("Expectation", "Failing")]
 public class FsCheckAdditionTest
 {
     private const Int32 max = 600;
